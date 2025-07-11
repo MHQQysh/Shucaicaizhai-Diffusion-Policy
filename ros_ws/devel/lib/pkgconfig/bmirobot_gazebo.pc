@@ -1,0 +1,8 @@
+prefix=/home/lsg/ros_ws/devel
+
+Name: bmirobot_gazebo
+Description: Description of bmirobot_gazebo
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

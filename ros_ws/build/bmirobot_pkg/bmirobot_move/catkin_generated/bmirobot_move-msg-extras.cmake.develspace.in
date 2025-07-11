@@ -1,0 +1,2 @@
+set(bmirobot_move_MESSAGE_FILES "")
+set(bmirobot_move_SERVICE_FILES "/home/lsg/ros_ws/src/bmirobot_pkg/bmirobot_move/srv/GraspServo.srv")

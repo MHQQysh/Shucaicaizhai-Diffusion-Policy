@@ -1,0 +1,8 @@
+prefix=/home/jok/ros_ws/install
+
+Name: bmirobot_moveit_v52
+Description: Description of bmirobot_moveit_v52
+Version: 0.3.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

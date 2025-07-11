@@ -1,0 +1,40 @@
+ros_control_namespace: bmirobot/controller_manager
+controller_list:
+  - name: right_trajectory_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: True
+    joints:
+      - right_joint1
+      - right_joint2
+      - right_joint3
+      - right_joint4
+      - right_joint5
+      - right_joint6
+      - right_joint7
+  - name: right_trajectory_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: True
+    joints:
+      - left_joint1
+      - left_joint2
+      - left_joint3
+      - left_joint4
+      - left_joint5
+      - left_joint6
+      - left_joint7
+  - name: right_hand_controller
+    action_ns: gripper_action
+    type: GripperCommand
+    default: True
+    joints:
+      - right_hand_joint1
+      - right_hand_joint2
+  - name: left_hand_controller
+    action_ns: gripper_action
+    type: GripperCommand
+    default: True
+    joints:
+      - left_hand_joint1
+      - left_hand_joint2

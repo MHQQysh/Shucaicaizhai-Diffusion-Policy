@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- Load the URDF, SRDF and other .yaml configuration files on the param server -->
+
+	 <rosparam param="IP">"192.168.1.180"</rosparam>
+	 <rosparam param="port">10000</rosparam>
+
+	 <rosparam param="savedata">"false"</rosparam>
+	 <rosparam param="leftarm">1</rosparam>
+	 <rosparam param="rightarm">0</rosparam>
+
+	 <rosparam param="savepath">"/home/bmi/bmiproject/data"</rosparam>
+
+	 <rosparam param="home_ljoint1">-0.0</rosparam>
+	 <rosparam param="home_ljoint2">0.0</rosparam>
+	 <rosparam param="home_ljoint3">-0.0</rosparam>
+	 <rosparam param="home_ljoint4">-0.0</rosparam>
+	 <rosparam param="home_ljoint5">-0.0</rosparam>
+	 <rosparam param="home_ljoint6">-0.0</rosparam>
+	 <rosparam param="home_ljoint7">0.0</rosparam>
+	 <rosparam param="home_ljoint8">0</rosparam>  
+
+
+	 <rosparam param="home_rjoint1">0.0</rosparam>
+	 <rosparam param="home_rjoint2">0.00</rosparam>
+	 <rosparam param="home_rjoint3">-0.0</rosparam>
+	 <rosparam param="home_rjoint4">-0.0</rosparam>
+	 <rosparam param="home_rjoint5">0.0</rosparam>
+	 <rosparam param="home_rjoint6">0.0</rosparam>
+	 <rosparam param="home_rjoint7">0.0</rosparam>
+	 <rosparam param="home_rjoint8">0.0</rosparam>  
+
+    <node name="bmirobotv51_two" pkg="bmirobot_hw" type="bmirobotv51_two" args="1" respawn="true" output="screen" />
+
+    <include file="$(find bmirobot_moveit)/launch/planning_context.launch">
+        <arg name="load_robot_description" value="true"/>
+    </include>
+
+</launch>

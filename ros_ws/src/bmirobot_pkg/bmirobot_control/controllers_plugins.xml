@@ -1,0 +1,12 @@
+<library path="lib/libbmirobot_control">
+
+  <class 
+    name="bmirobot_control/IK_controller"
+    type="bmirobot_control::IK_controller"
+    base_class_type="controller_interface::ControllerBase">
+    <description>
+        This is a calibration controller for a bmi robot.
+    </description>
+  </class>
+
+</library>

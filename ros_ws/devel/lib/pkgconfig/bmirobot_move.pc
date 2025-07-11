@@ -1,0 +1,8 @@
+prefix=/home/lsg/ros_ws/devel
+
+Name: bmirobot_move
+Description: Description of bmirobot_move
+Version: 1.3.1
+Cflags: -I/home/lsg/ros_ws/devel/include -I/home/lsg/ros_ws/src/bmirobot_pkg/bmirobot_move/include
+Libs: -L${prefix}/lib -lbmirobot_move -lbmirobot_move_filter
+Requires: actionlib_msgs geometry_msgs moveit_msgs trajectory_msgs std_msgs message_runtime moveit_visual_tools object_recognition_msgs

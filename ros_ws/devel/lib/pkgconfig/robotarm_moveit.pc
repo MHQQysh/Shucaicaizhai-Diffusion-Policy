@@ -1,0 +1,8 @@
+prefix=/home/lsg/ros_ws/devel
+
+Name: robotarm_moveit
+Description: Description of robotarm_moveit
+Version: 0.3.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

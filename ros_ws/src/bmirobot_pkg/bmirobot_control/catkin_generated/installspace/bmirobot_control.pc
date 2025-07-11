@@ -1,0 +1,8 @@
+prefix=/home/jok/ros_ws/install
+
+Name: bmirobot_control
+Description: Description of bmirobot_control
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib -lrealtime_tools -lhardware_interface -lcontroller_interface -lcontrol_toolbox -lkdl_parser -lbmirobot_hw -leigen_conversions
+Requires: 

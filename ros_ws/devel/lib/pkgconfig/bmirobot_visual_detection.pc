@@ -1,0 +1,8 @@
+prefix=/home/lsg/ros_ws/devel
+
+Name: bmirobot_visual_detection
+Description: Description of bmirobot_visual_detection
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<launch>
+
+     <node pkg="tf" type="static_transform_publisher" name="camera_broadcaster" args=" 0.489641550946 0.280618870211 -0.26252610882 0.244997343207 -0.0778845998903 0.96398076149 0.0682010439669  /right_link1 /camera_link 100" />
+     <!--node pkg="tf" type="static_transform_publisher" name="grasp_broadcaster" args="0.160 0.01 0 0 0 0 1 link8 link_calibration 100" /-->
+
+</launch>

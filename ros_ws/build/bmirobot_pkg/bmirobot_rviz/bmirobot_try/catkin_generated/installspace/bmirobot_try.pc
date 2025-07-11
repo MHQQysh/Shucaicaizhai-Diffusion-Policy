@@ -1,0 +1,8 @@
+prefix=/home/lsg/ros_ws/install
+
+Name: bmirobot_try
+Description: Description of bmirobot_try
+Version: 0.3.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

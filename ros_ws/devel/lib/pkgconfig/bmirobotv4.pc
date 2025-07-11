@@ -1,0 +1,8 @@
+prefix=/home/lsg/ros_ws/devel
+
+Name: bmirobotv4
+Description: Description of bmirobotv4
+Version: 0.2.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

@@ -1,0 +1,8 @@
+prefix=/home/lsg/ros_ws/install
+
+Name: bmirobot_hw
+Description: Description of bmirobot_hw
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: roscpp
