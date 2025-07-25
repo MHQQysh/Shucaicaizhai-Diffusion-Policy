@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<launch>
+
+  <!-- Launch grap_test_rviz.launch to visualize this test -->
+
+  <!-- Debug -->  
+  <arg name="debug" default="false" />
+  <arg unless="$(arg debug)" name="launch_prefix" value="" />
+  <arg     if="$(arg debug)" name="launch_prefix" value="gdb --ex run --args" />
+
+  <!-- Load the URDF, SRDF and other .yaml configuration files on the param server -->
+  <include file="$(find bmirobot)/launch/planning_context.launch">
+    <arg name="load_robot_description" value="true"/>
+  </include>
+  <!-- Publish world frame -->
+  <node pkg="tf" type="static_transform_publisher" name="tf_publisher_world" args="0 0 0 0 0 0 /world /odom_combined 25" />
+
+  <!-- 
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
+    <param name="/use_gui" value="true"/>
+    <rosparam param="/source_list">[/move_group/fake_controller_joint_states]</rosparam>
+  </node>
+-->
+  <!-- Given the published joint states, publish tf for the robot links 
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="true" output="screen" />
+
+-->
+  <!-- Verbose mode -->
+  <arg name="verbose" default="false" />
+  <arg unless="$(arg verbose)" name="command_args" value="" />
+  <arg     if="$(arg verbose)" name="command_args" value="--verbose" />
+
+  <!-- Which arm to use -->
+  <arg name="arm" default="right"/>
+<!--node name="bmirobot_visual_servo_node" pkg="bmirobot_visual_servo" type="bmirobot_visual_servo_node" output="screen" /-->
+  <!-- Start the test -->
+  <node name="grasp_servo" launch-prefix="$(arg launch_prefix)" pkg="bmirobot_grasp" 
+	type="bmirobot_grasp_service" output="screen" args="$(arg command_args)">
+    <param name="arm" value="$(arg arm)"/>
+    <rosparam command="load" file="$(find bmirobot_grasp)/config/bmirobot_grasp_data.yaml"/>    
+    <rosparam command="load" file="$(find bmirobot)/config/kinematics.yaml"/>
+  </node>
+
+</launch>

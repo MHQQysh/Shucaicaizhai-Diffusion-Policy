@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<robot>
+  <!--xacro:property name="camera_name" value="rgbd" /--> <!-- Size of square 'camera' box -->
+  <!--xacro:property name="frame_name" value="rgbd_depth" /--> <!-- Size of square 'camera' box -->
+  <!-- ros_control plugin -->
+  <gazebo>
+    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+      <robotNamespace>/bmirobot</robotNamespace>
+      <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType >
+      <legacyModeNS>true</legacyModeNS>
+    </plugin>
+  </gazebo>
+
+  <gazebo reference="base_link">
+    <material>Gazebo/Orange</material>
+  </gazebo>
+
+
+  <!-- right_link1 -->
+  <gazebo reference="right_link1">
+    <material>Gazebo/Orange</material>
+  </gazebo>
+
+  <!-- right_link2 -->
+  <gazebo reference="right_link2">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Red</material>
+  </gazebo>
+
+  <!-- right_link3 -->
+  <gazebo reference="right_link3">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Orange</material>
+  </gazebo>
+
+  <!-- right_link4 -->
+  <gazebo reference="right_link4">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Red</material>
+  </gazebo>
+
+  <!-- right_link5 -->
+  <gazebo reference="right_link5">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Orange</material>
+  </gazebo>
+  <!-- right_link6 -->
+  <gazebo reference="right_link6">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Blue</material>
+  </gazebo>
+
+  <!-- right_link7 -->
+  <gazebo reference="right_link7">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Orange</material>
+  </gazebo>
+
+  <!-- left_link1 -->
+  <gazebo reference="left_link1">
+    <material>Gazebo/Orange</material>
+  </gazebo>
+
+  <!-- left_link2 -->
+  <gazebo reference="left_link2">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Red</material>
+  </gazebo>
+
+  <!-- left_link3 -->
+  <gazebo reference="left_link3">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Orange</material>
+  </gazebo>
+
+  <!-- left_link4 -->
+  <gazebo reference="left_link4">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Red</material>
+  </gazebo>
+
+  <!-- left_link5 -->
+  <gazebo reference="left_link5">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Orange</material>
+  </gazebo>
+  <!-- left_link6 -->
+  <gazebo reference="left_link6">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Blue</material>
+  </gazebo>
+
+  <!-- left_link7 -->
+  <gazebo reference="left_link7">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Orange</material>
+  </gazebo>
+
+</robot>

@@ -1,0 +1,40 @@
+controller_list:
+  - name: fake_left_arm_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - left_joint1
+      - left_joint2
+      - left_joint3
+      - left_joint4
+      - left_joint5
+      - left_joint6
+      - left_joint7
+  - name: fake_left_hand_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - left_hand_joint1
+      - left_hand_joint2
+  - name: fake_right_arm_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - right_joint1
+      - right_joint2
+      - right_joint3
+      - right_joint4
+      - right_joint5
+      - right_joint6
+      - right_joint7
+  - name: fake_right_hand_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - right_hand_joint1
+      - right_hand_joint2
+initial:  # Define initial robot poses per group
+  - group: left_arm
+    pose: /home_left_arm
+  - group: left_hand
+    pose: /home_left_hand
+  - group: right_arm
+    pose: /home_right_arm
+  - group: right_hand
+    pose: /home_right_hand

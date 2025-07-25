@@ -1,0 +1,3 @@
+geometry_msgs/Pose object_pose
+---
+int32 status

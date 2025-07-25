@@ -1,0 +1,16 @@
+<launch>
+  
+    <!-- Launch Gazebo  -->
+    <include file="$(find bmirobot_gazebo)/launch/bmirobot_try.launch" />
+
+    <!-- ros_control arm launch file -->
+    <include file="$(find bmirobot_gazebo)/launch/bmi_states.launch" />   
+
+    <!-- ros_control trajectory control dof arm launch file -->
+    <include file="$(find bmirobot_gazebo)/launch/bmi_trajectory.launch" />
+
+    <!-- moveit launch file -->
+    <include file="$(find bmirobot_try)/launch/moveit_planning_execution.launch">
+    </include>
+</launch>
+

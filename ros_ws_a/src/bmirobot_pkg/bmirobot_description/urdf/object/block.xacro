@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<robot name="block" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <xacro:property name="color" value="Gazebo/Red" />
+  <xacro:property name="size" value="0.075 0.075 0.075" />
+  <xacro:property name="mass" value="0.1" />
+  <xacro:property name="inertia" value="0.00003375" />
+
+  <link name="block_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="${mass}"/>
+      <inertia
+        ixx="${inertia}"
+        ixy="0.0"
+        ixz="0.0"
+        iyy="${inertia}"
+        iyz="0.0"
+        izz="${inertia}" />
+    </inertial>
+    <collision name="block_collision">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="${size}"/>
+      </geometry>
+    </collision>
+    <visual name="block_visual">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <material name="block_material">
+        <color rgba="1 0 0 1"/>  
+      </material>
+      <geometry>
+        <box size="${size}"/>
+      </geometry>
+    </visual>
+  </link>
+  
+  <joint name="boxvirtual_joint" type="fixed">
+    <parent link="base_link"/> 
+    <child link="block_link"/>
+    <origin xyz="0.5 -0.2 -0.2" rpy="0 0 0" />
+  </joint>
+
+</robot>
+

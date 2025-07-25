@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<launch>
+
+   <include file="$(find bmirobot_hw)/launch/bmirobotv51_two.launch">
+   </include>
+
+   <include file="$(find bmirobot_control)/launch/bmirobotv5_two_control.launch">
+   </include>
+ 
+
+</launch>

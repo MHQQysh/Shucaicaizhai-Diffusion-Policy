@@ -1,0 +1,30 @@
+
+<launch>
+
+	  <!-- Model setup -->
+  <arg name="model" default="$(find bmirobot_description)/urdf/camera/test.xacro"/>
+
+  <!-- spawn urdf model to gazebo -->
+  <param name="robot_description" command="$(find xacro)/xacro $(arg model)" />
+  <node  name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" args="-z 1.0 -unpause -urdf -model test_model -param robot_description" respawn="false" output="screen" />
+
+    <!-- 运行gazebo仿真环境 -->
+    <include file="$(find gazebo_ros)/launch/empty_world.launch">
+        <!-- <arg name="world_name" value="$(arg world_name)" /> -->
+        <arg name="paused" value="true"/>
+    <arg name="use_sim_time" value="true"/>
+    <arg name="gui" value="true"/>
+    <arg name="headless" value="false"/>
+    <arg name="recording" value="false"/>
+    <arg name="debug" value="false"/>
+    </include>
+
+    <!-- 运行joint_state_publisher节点，发布机器人的关节状态  -->
+    <!-- <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" ></node> -->
+
+    <!-- 运行robot_state_publisher节点，发布tf  -->
+    <!-- <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"  output="screen" >
+        <param name="publish_frequency" type="double" value="50.0" />
+    </node>  -->
+   
+</launch>

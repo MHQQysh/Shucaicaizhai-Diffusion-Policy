@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- Load the URDF, SRDF and other .yaml configuration files on the param server -->
+
+        <param name="points"  value="0"/>
+   <include file="$(find bmirobot_hw)/launch/bmirobotv51_right.launch">
+
+   </include>
+
+   <include file="$(find bmirobot_control)/launch/bmirobotv5_two_control_group.launch">
+   </include>
+
+</launch>

@@ -1,0 +1,12 @@
+block:
+  primitive_poses:
+    - header:
+        frame_id: "world"  # 
+      position:
+        x: 0.5            # 
+        y: 0.0            # 
+        z: 0.3            # 
+  primitives:
+    - primitive_type: 1   # 
+      dimensions: [0.2, 0.2, 0.2]  # 
+  type: "box"             #

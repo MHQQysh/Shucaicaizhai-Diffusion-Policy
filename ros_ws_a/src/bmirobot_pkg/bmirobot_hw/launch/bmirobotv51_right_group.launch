@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<launch>
+
+   <param name="points"  value="0"/>
+   <include file="$(find bmirobot_hw)/launch/bmirobotv51_right.launch">
+
+   </include>
+
+   <include file="$(find bmirobot_control)/launch/bmirobotv5_two_control_group.launch">
+   </include>
+ 
+
+</launch>

@@ -1,0 +1,221 @@
+; Auto-generated. Do not edit!
+
+
+(cl:in-package eval_diffusion-msg)
+
+
+;//! \htmlinclude robot.msg.html
+
+(cl:defclass <robot> (roslisp-msg-protocol:ros-message)
+  ((joint_pos
+    :reader joint_pos
+    :initarg :joint_pos
+    :type (cl:vector cl:float)
+   :initform (cl:make-array 9 :element-type 'cl:float :initial-element 0.0))
+   (joint_spd
+    :reader joint_spd
+    :initarg :joint_spd
+    :type (cl:vector cl:float)
+   :initform (cl:make-array 9 :element-type 'cl:float :initial-element 0.0))
+   (eff_pose
+    :reader eff_pose
+    :initarg :eff_pose
+    :type (cl:vector cl:float)
+   :initform (cl:make-array 6 :element-type 'cl:float :initial-element 0.0))
+   (eff_spd
+    :reader eff_spd
+    :initarg :eff_spd
+    :type (cl:vector cl:float)
+   :initform (cl:make-array 6 :element-type 'cl:float :initial-element 0.0))
+   (timestamp
+    :reader timestamp
+    :initarg :timestamp
+    :type cl:float
+    :initform 0.0))
+)
+
+(cl:defclass robot (<robot>)
+  ())
+
+(cl:defmethod cl:initialize-instance :after ((m <robot>) cl:&rest args)
+  (cl:declare (cl:ignorable args))
+  (cl:unless (cl:typep m 'robot)
+    (roslisp-msg-protocol:msg-deprecation-warning "using old message class name eval_diffusion-msg:<robot> is deprecated: use eval_diffusion-msg:robot instead.")))
+
+(cl:ensure-generic-function 'joint_pos-val :lambda-list '(m))
+(cl:defmethod joint_pos-val ((m <robot>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader eval_diffusion-msg:joint_pos-val is deprecated.  Use eval_diffusion-msg:joint_pos instead.")
+  (joint_pos m))
+
+(cl:ensure-generic-function 'joint_spd-val :lambda-list '(m))
+(cl:defmethod joint_spd-val ((m <robot>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader eval_diffusion-msg:joint_spd-val is deprecated.  Use eval_diffusion-msg:joint_spd instead.")
+  (joint_spd m))
+
+(cl:ensure-generic-function 'eff_pose-val :lambda-list '(m))
+(cl:defmethod eff_pose-val ((m <robot>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader eval_diffusion-msg:eff_pose-val is deprecated.  Use eval_diffusion-msg:eff_pose instead.")
+  (eff_pose m))
+
+(cl:ensure-generic-function 'eff_spd-val :lambda-list '(m))
+(cl:defmethod eff_spd-val ((m <robot>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader eval_diffusion-msg:eff_spd-val is deprecated.  Use eval_diffusion-msg:eff_spd instead.")
+  (eff_spd m))
+
+(cl:ensure-generic-function 'timestamp-val :lambda-list '(m))
+(cl:defmethod timestamp-val ((m <robot>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader eval_diffusion-msg:timestamp-val is deprecated.  Use eval_diffusion-msg:timestamp instead.")
+  (timestamp m))
+(cl:defmethod roslisp-msg-protocol:serialize ((msg <robot>) ostream)
+  "Serializes a message object of type '<robot>"
+  (cl:map cl:nil #'(cl:lambda (ele) (cl:let ((bits (roslisp-utils:encode-double-float-bits ele)))
+    (cl:write-byte (cl:ldb (cl:byte 8 0) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 8) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 16) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 24) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 32) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 40) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 48) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 56) bits) ostream)))
+   (cl:slot-value msg 'joint_pos))
+  (cl:map cl:nil #'(cl:lambda (ele) (cl:let ((bits (roslisp-utils:encode-double-float-bits ele)))
+    (cl:write-byte (cl:ldb (cl:byte 8 0) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 8) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 16) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 24) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 32) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 40) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 48) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 56) bits) ostream)))
+   (cl:slot-value msg 'joint_spd))
+  (cl:map cl:nil #'(cl:lambda (ele) (cl:let ((bits (roslisp-utils:encode-double-float-bits ele)))
+    (cl:write-byte (cl:ldb (cl:byte 8 0) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 8) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 16) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 24) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 32) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 40) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 48) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 56) bits) ostream)))
+   (cl:slot-value msg 'eff_pose))
+  (cl:map cl:nil #'(cl:lambda (ele) (cl:let ((bits (roslisp-utils:encode-double-float-bits ele)))
+    (cl:write-byte (cl:ldb (cl:byte 8 0) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 8) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 16) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 24) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 32) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 40) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 48) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 56) bits) ostream)))
+   (cl:slot-value msg 'eff_spd))
+  (cl:let ((bits (roslisp-utils:encode-double-float-bits (cl:slot-value msg 'timestamp))))
+    (cl:write-byte (cl:ldb (cl:byte 8 0) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 8) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 16) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 24) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 32) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 40) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 48) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 56) bits) ostream))
+)
+(cl:defmethod roslisp-msg-protocol:deserialize ((msg <robot>) istream)
+  "Deserializes a message object of type '<robot>"
+  (cl:setf (cl:slot-value msg 'joint_pos) (cl:make-array 9))
+  (cl:let ((vals (cl:slot-value msg 'joint_pos)))
+    (cl:dotimes (i 9)
+    (cl:let ((bits 0))
+      (cl:setf (cl:ldb (cl:byte 8 0) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 8) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 16) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 24) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 32) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 40) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 48) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 56) bits) (cl:read-byte istream))
+    (cl:setf (cl:aref vals i) (roslisp-utils:decode-double-float-bits bits)))))
+  (cl:setf (cl:slot-value msg 'joint_spd) (cl:make-array 9))
+  (cl:let ((vals (cl:slot-value msg 'joint_spd)))
+    (cl:dotimes (i 9)
+    (cl:let ((bits 0))
+      (cl:setf (cl:ldb (cl:byte 8 0) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 8) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 16) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 24) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 32) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 40) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 48) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 56) bits) (cl:read-byte istream))
+    (cl:setf (cl:aref vals i) (roslisp-utils:decode-double-float-bits bits)))))
+  (cl:setf (cl:slot-value msg 'eff_pose) (cl:make-array 6))
+  (cl:let ((vals (cl:slot-value msg 'eff_pose)))
+    (cl:dotimes (i 6)
+    (cl:let ((bits 0))
+      (cl:setf (cl:ldb (cl:byte 8 0) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 8) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 16) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 24) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 32) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 40) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 48) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 56) bits) (cl:read-byte istream))
+    (cl:setf (cl:aref vals i) (roslisp-utils:decode-double-float-bits bits)))))
+  (cl:setf (cl:slot-value msg 'eff_spd) (cl:make-array 6))
+  (cl:let ((vals (cl:slot-value msg 'eff_spd)))
+    (cl:dotimes (i 6)
+    (cl:let ((bits 0))
+      (cl:setf (cl:ldb (cl:byte 8 0) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 8) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 16) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 24) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 32) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 40) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 48) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 56) bits) (cl:read-byte istream))
+    (cl:setf (cl:aref vals i) (roslisp-utils:decode-double-float-bits bits)))))
+    (cl:let ((bits 0))
+      (cl:setf (cl:ldb (cl:byte 8 0) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 8) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 16) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 24) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 32) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 40) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 48) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 56) bits) (cl:read-byte istream))
+    (cl:setf (cl:slot-value msg 'timestamp) (roslisp-utils:decode-double-float-bits bits)))
+  msg
+)
+(cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql '<robot>)))
+  "Returns string type for a message object of type '<robot>"
+  "eval_diffusion/robot")
+(cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql 'robot)))
+  "Returns string type for a message object of type 'robot"
+  "eval_diffusion/robot")
+(cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<robot>)))
+  "Returns md5sum for a message object of type '<robot>"
+  "40052a2da386ad976e3644364a1e9279")
+(cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql 'robot)))
+  "Returns md5sum for a message object of type 'robot"
+  "40052a2da386ad976e3644364a1e9279")
+(cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<robot>)))
+  "Returns full string definition for message of type '<robot>"
+  (cl:format cl:nil "float64[9] joint_pos~%float64[9] joint_spd~%float64[6] eff_pose~%float64[6] eff_spd~%float64 timestamp~%~%~%"))
+(cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'robot)))
+  "Returns full string definition for message of type 'robot"
+  (cl:format cl:nil "float64[9] joint_pos~%float64[9] joint_spd~%float64[6] eff_pose~%float64[6] eff_spd~%float64 timestamp~%~%~%"))
+(cl:defmethod roslisp-msg-protocol:serialization-length ((msg <robot>))
+  (cl:+ 0
+     0 (cl:reduce #'cl:+ (cl:slot-value msg 'joint_pos) :key #'(cl:lambda (ele) (cl:declare (cl:ignorable ele)) (cl:+ 8)))
+     0 (cl:reduce #'cl:+ (cl:slot-value msg 'joint_spd) :key #'(cl:lambda (ele) (cl:declare (cl:ignorable ele)) (cl:+ 8)))
+     0 (cl:reduce #'cl:+ (cl:slot-value msg 'eff_pose) :key #'(cl:lambda (ele) (cl:declare (cl:ignorable ele)) (cl:+ 8)))
+     0 (cl:reduce #'cl:+ (cl:slot-value msg 'eff_spd) :key #'(cl:lambda (ele) (cl:declare (cl:ignorable ele)) (cl:+ 8)))
+     8
+))
+(cl:defmethod roslisp-msg-protocol:ros-message-to-list ((msg <robot>))
+  "Converts a ROS message object to a list"
+  (cl:list 'robot
+    (cl:cons ':joint_pos (joint_pos msg))
+    (cl:cons ':joint_spd (joint_spd msg))
+    (cl:cons ':eff_pose (eff_pose msg))
+    (cl:cons ':eff_spd (eff_spd msg))
+    (cl:cons ':timestamp (timestamp msg))
+))

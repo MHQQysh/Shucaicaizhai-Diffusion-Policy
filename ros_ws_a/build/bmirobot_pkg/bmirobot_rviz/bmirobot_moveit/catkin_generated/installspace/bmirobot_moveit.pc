@@ -1,0 +1,8 @@
+prefix=/home/lsg/ros_ws/install
+
+Name: bmirobot_moveit
+Description: Description of bmirobot_moveit
+Version: 0.3.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

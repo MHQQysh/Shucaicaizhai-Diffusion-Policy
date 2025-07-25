@@ -1,0 +1,8 @@
+prefix=/home/jok/ros_ws/install
+
+Name: bmirobot
+Description: Description of bmirobot
+Version: 0.2.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

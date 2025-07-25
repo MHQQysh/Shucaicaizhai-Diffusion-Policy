@@ -1,0 +1,8 @@
+prefix=/home/lsg/ros_ws/install
+
+Name: eval_diffusion
+Description: Description of eval_diffusion
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: roscpp rospy std_msgs message_runtime sensor_msgs
